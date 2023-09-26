@@ -15,6 +15,7 @@ public class Deck
         Deck deckClass = new Deck();
         deckClass.initializeNewDeck();
         deckClass.shuffle();
+        deckClass.dealCardFromDeck();
 
     }
     private List<Card> cards;
@@ -77,8 +78,10 @@ public class Deck
      * @returns The top card of the deck (at cards index 0)
      */
     public Card dealCardFromDeck() {
-        // deal card from list, then remove it from the original list 
-        return null;
+        // deal card from list, then remove it from the original list
+        Card dealtCard = cards.get(0);
+        cards.remove(0);
+        return dealtCard;
     }
     
     /**
@@ -87,6 +90,7 @@ public class Deck
      */
     public void addCardToDeck(Card cardToAdd) {
         // To be written
+        
     }
     
 }
