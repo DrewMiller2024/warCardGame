@@ -10,14 +10,6 @@ import java.util.Collections;
  */
 public class Deck
 {
-    /* delete main method when done with code */
-    public static void main(String[] args) {
-        Deck deckClass = new Deck();
-        deckClass.initializeNewDeck();
-        deckClass.shuffle();
-        deckClass.dealCardFromDeck();
-
-    }
     private List<Card> cards;
 
     /**
@@ -92,7 +84,7 @@ public class Deck
      */
     public void addCardToDeck(Card cardToAdd) {
         // To be written
-        
+        cards.add(cardToAdd);
     }
     
 }
