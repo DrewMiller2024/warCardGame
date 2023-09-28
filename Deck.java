@@ -84,7 +84,7 @@ public class Deck
      */
     public void addCardToDeck(Card cardToAdd) {
         // To be written
-        cards.add(cardToAdd);
+        this.cards.add(cardToAdd);
     }
     
 }
