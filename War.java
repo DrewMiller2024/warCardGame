@@ -10,7 +10,7 @@ public class War
     private Deck pile = new Deck();
     private Deck play1;
     private Deck play2;
-    private boolean gameIsOver = false;
+    private boolean gameIsOver;
     /**
      * Constructor for the game
      * Include your initialization here -- card decks, shuffling, etc
@@ -25,7 +25,7 @@ public class War
        Deck[] halves = deck.dealDeck();
        play1 = halves[0];
        play2 = halves[1];
-        
+        this.gameIsOver = false;
         // ...then run the event loop
         this.runEventLoop();
     }
@@ -39,12 +39,13 @@ owchart you created for this game
         int turnNumber = 1;
         while (turnNumber <= 300 && !gameIsOver) {
             System.out.println("--Turn: " + turnNumber + "--");
-            System.out.println("--Player 1: "+play1.getDeckSize()+ " cards, Player 2: " + play2.getDeckSize() +" cards--");
+            System.out.println("P1: "+play1.getDeckSize()+ " cards, P2: " + play2.getDeckSize() +" cards");
             checkForWinner();
 
-            if (turnNumber == 300 && !gameIsOver) {
+            if (turnNumber == 300) {
                 maxTurnsPlayed();
             }
+            turnNumber++;
         }
     }
     
@@ -70,7 +71,6 @@ owchart you created for this game
         } else {
             System.out.println("--Draw! After 300 turns, both players have the same number of cards left--");
         }
-        gameIsOver = true;
     }
 
     /**
