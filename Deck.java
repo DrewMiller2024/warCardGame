@@ -40,7 +40,22 @@ public class Deck
     public int getDeckSize() {
         return cards.size();
     }
+     public int getCardRank(int index) {
+        Card c = cards.get(index);
+        int cRank = c.getRank();
+        return cRank;
+     }
+     public String getCardSuit (int index) {
+        Card c = cards.get(index);
+        String cSuit = c.getSuit();
+        return cSuit;
+     }
     
+     public String getCardFace(int index) {
+        Card c = cards.get(index);
+        String cFace = c.getFace();
+        return cFace;
+     }
     /**
      * Shuffles the cards in the deck
      */
