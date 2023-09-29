@@ -58,10 +58,10 @@ owchart you created for this game
             } else {
                 System.out.println("--Player 2 has won! Player 1 has run out of cards--");
             }
-            gameIsOver = true;
+            System.exit(0);
         } else if (play2.getDeckSize() == 0) {
             System.out.println("--Player 2 has won! Player 1 has run out of cards--");
-            gameIsOver = true;
+            System.exit(0);
         }
     }
 
