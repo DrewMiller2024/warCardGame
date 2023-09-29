@@ -106,12 +106,12 @@ owchart you created for this game
 
     private void playWar() {
         System.out.println("War!");
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 4; i++) {
             checkForWinner();
             pile.addCardToDeck(play1.dealCardFromDeck());
             pile.addCardToDeck(play2.dealCardFromDeck());
         }
-        System.out.println("Both players place a card face down");
+        System.out.println("Both players place 3 cards face down, then 1 card face up");
         printCardsPlayed();
         checkEncounter();
     }
